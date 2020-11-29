@@ -167,6 +167,7 @@ public class MainProgram extends javax.swing.JFrame {
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, 50));
 
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\GitHub\\TA-PBO-main\\TA-PBO-main\\Group 2.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon("F:\\program\\praktikum dkp\\TA\\Converter\\Group 2.png")); // NOI18N
         jButton3.setActionCommand("clear");
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
@@ -240,6 +241,7 @@ public class MainProgram extends javax.swing.JFrame {
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,11 +457,14 @@ public class MainProgram extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pil1ActionPerformed
 
+
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         tabel tabeltab = new tabel();
         tabeltab.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+
 
 
     /**
