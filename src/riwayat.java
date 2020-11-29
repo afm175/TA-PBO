@@ -1,6 +1,9 @@
 
 import java.awt.Cursor;
 import java.awt.event.KeyEvent;
+import java.util.Vector;
+import javax.swing.JComboBox;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,19 +13,67 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author Azzam
+ * @author Haikal
  */
-public class info extends javax.swing.JFrame {
+public class riwayat extends javax.swing.JFrame {
 
     /**
      * Creates new form info
      */
-    public info() {
+    
+    Object S1,S2;
+    String nilaiAwal,nilaiAkhir;
+    
+    public riwayat(Object val1, String val2, Object val3, String val4) {
         initComponents();
-
-        
+        this.S1=(String) val1;
+        this.nilaiAwal=val2;
+        this.S2=(String) val3;
+        this.nilaiAkhir=val4;
+ 
+        tambahData();
     }
 
+    void tambahData(){
+        Object[] array1 = new String [5];
+        String[] array2 = new String [5];
+        Object[] array3 = new String [5];
+        String[] array4 = new String [5];
+        
+        /*for (int i = 0; i < 0;){
+        array1[i] = S1;
+        array2[i] = nilaiAwal;
+        array3[i] = S2;
+        array4[i] = nilaiAkhir;
+        }*/
+        
+        DefaultTableModel rt = (DefaultTableModel) jTable2.getModel();
+        
+        Vector v = new Vector();
+        
+        /*for(int j = 0; j < 5;j++) 
+        {
+        v.add(array1);
+        v.add(array2);
+        v.add(array3);
+        v.add(array4);
+        }*/
+        
+        for(int j = 0; j < 5;j++) 
+        {
+        v.add(S1);
+        v.add(nilaiAwal);
+        v.add(S2);
+        v.add(nilaiAkhir);
+        }
+                
+        rt.addRow(v);
+    }
+
+
+    
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,13 +88,9 @@ public class info extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -52,7 +99,7 @@ public class info extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 209, 205));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("About");
+        jLabel1.setText("Riwayat");
 
         jButton1.setBackground(new java.awt.Color(0, 209, 205));
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\GitHub\\TA-PBO\\Repeat Grid 2.png")); // NOI18N
@@ -93,7 +140,7 @@ public class info extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
@@ -106,33 +153,9 @@ public class info extends javax.swing.JFrame {
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 30));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 30));
 
         jPanel2.setBackground(new java.awt.Color(68, 68, 68));
-
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setText("2020 Abdullah Azzam");
-
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel3.setText("©");
-
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("Currency Converter");
-
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("v2.0");
-
-        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Exchange rate updated on 13/5/2020");
-
-        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("Exchange rate provided by Webull");
 
         jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\GitHub\\TA-PBO\\ok.png")); // NOI18N
         jButton4.setBorderPainted(false);
@@ -148,56 +171,56 @@ public class info extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Satuan Awal", "Nilai Awal", "Satuan Akhir", "Nilai Akhir"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel4))
+                .addGap(11, 11, 11)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel5))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel7))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel6))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jButton4))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel3)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel2))
+                .addGap(130, 130, 130)
+                .addComponent(jButton4)
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addGap(22, 22, 22)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(33, 33, 33)
                 .addComponent(jButton4)
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)))
+                .addGap(99, 99, 99))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 330, 270));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 400, 290));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+   
+    
+    
     private void jButton2MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseMoved
         // TODO add your handling code here:
         Cursor c = new Cursor(Cursor.HAND_CURSOR);
@@ -271,13 +294,9 @@ public class info extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

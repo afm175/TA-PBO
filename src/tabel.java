@@ -1,6 +1,12 @@
 
+import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Vector;
+import javax.swing.JComboBox;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,19 +16,50 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author Azzam
+ * @author Haikal
  */
-public class info extends javax.swing.JFrame {
+public class tabel extends javax.swing.JFrame {
 
     /**
      * Creates new form info
      */
-    public info() {
+    
+    public tabel() {
         initComponents();
-
+        pleasebisa();
+        
+        jTable1.getTableHeader().setFont(new Font("Segor UI", Font.BOLD, 12));
+        jTable1.getTableHeader().setOpaque(false);
+        jTable1.getTableHeader().setBackground(new Color(0,209,205));
+        jTable1.getTableHeader().setForeground(new Color(255, 255, 255));
+        jTable1.setRowHeight(25);
         
     }
-
+    
+    public void pleasebisa(){
+        String [][] data = {
+            {"M", "1/1000"},
+            {"CM", "1/100000"},
+            {"MM", "1/1000000"},
+            {"Mile", "1/0.621"},
+            {"Feet", "1/3280.8399"},
+            {"Inch", "1/39370.0787"},
+            {"Yard", "1/1093.6133"},
+        };
+        
+        DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+        
+        for(int i = 0; i < data.length; i++){
+            String [] row = new String[data[i].length];
+            
+            for(int j = 0; j < data[i].length; j++){
+                row[j] = data[i][j];
+            };
+            
+            model.addRow(row);
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,13 +74,9 @@ public class info extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -52,7 +85,7 @@ public class info extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 209, 205));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("About");
+        jLabel1.setText("Tabel Konversi");
 
         jButton1.setBackground(new java.awt.Color(0, 209, 205));
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\GitHub\\TA-PBO\\Repeat Grid 2.png")); // NOI18N
@@ -93,7 +126,7 @@ public class info extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 221, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
@@ -106,33 +139,9 @@ public class info extends javax.swing.JFrame {
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 30));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 30));
 
         jPanel2.setBackground(new java.awt.Color(68, 68, 68));
-
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setText("2020 Abdullah Azzam");
-
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel3.setText("©");
-
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("Currency Converter");
-
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("v2.0");
-
-        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Exchange rate updated on 13/5/2020");
-
-        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("Exchange rate provided by Webull");
 
         jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Documents\\GitHub\\TA-PBO\\ok.png")); // NOI18N
         jButton4.setBorderPainted(false);
@@ -148,51 +157,60 @@ public class info extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Satuan", "Nilai"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable1.setFocusable(false);
+        jTable1.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        jTable1.setRowHeight(25);
+        jTable1.setShowVerticalLines(false);
+        jTable1.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel4))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel5))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel7))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel6))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jButton4))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel3)
-                .addGap(0, 0, 0)
-                .addComponent(jLabel2))
+                .addGap(130, 130, 130)
+                .addComponent(jButton4)
+                .addContainerGap(129, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(33, 33, 33)
                 .addComponent(jButton4)
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)))
+                .addGap(99, 99, 99))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 330, 270));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 400, 290));
 
         pack();
         setLocationRelativeTo(null);
@@ -261,7 +279,7 @@ public class info extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new info().setVisible(true);
+                new tabel().setVisible(true);
             }
         });
     }
@@ -271,13 +289,9 @@ public class info extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

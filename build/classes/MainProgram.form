@@ -49,29 +49,36 @@
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Component id="inputamount" min="-2" pref="208" max="-2" attributes="0"/>
-                      <Component id="jSeparator2" min="-2" pref="241" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jSeparator2" pref="141" max="32767" attributes="0"/>
+                              <Component id="inputamount" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="pil1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                          <Component id="pil2" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="output" min="-2" pref="241" max="-2" attributes="0"/>
-                      <Component id="jSeparator1" min="-2" pref="241" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jButton3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                           <Component id="convert" min="-2" pref="140" max="-2" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="output" alignment="0" pref="141" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="pil2" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <Component id="jButton4" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <Component id="jButton5" min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton4" min="-2" pref="37" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -81,20 +88,19 @@
                   <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                  <Component id="inputamount" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="inputamount" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="pil1" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Component id="jSeparator2" min="-2" pref="7" max="-2" attributes="0"/>
-                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="pil1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="pil2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="32" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="23" pref="23" max="-2" attributes="0"/>
-                  <Component id="output" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="output" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="pil2" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" pref="8" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -103,7 +109,10 @@
                       <Component id="convert" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" pref="27" max="32767" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -145,6 +154,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -160,12 +170,15 @@
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="USD"/>
-                <StringItem index="1" value="IDR"/>
-                <StringItem index="2" value="SGD"/>
-                <StringItem index="3" value="SAR"/>
-                <StringItem index="4" value="JPY"/>
+              <StringArray count="8">
+                <StringItem index="0" value="Kilometer"/>
+                <StringItem index="1" value="Meter"/>
+                <StringItem index="2" value="Centimeter"/>
+                <StringItem index="3" value="Milimeter"/>
+                <StringItem index="4" value="Mile"/>
+                <StringItem index="5" value="Foot"/>
+                <StringItem index="6" value="Inch"/>
+                <StringItem index="7" value="Yard"/>
               </StringArray>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -174,6 +187,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="pil1MouseMoved"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pil1ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -185,15 +199,17 @@
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="USD"/>
-                <StringItem index="1" value="IDR"/>
-                <StringItem index="2" value="SGD"/>
-                <StringItem index="3" value="SAR"/>
-                <StringItem index="4" value="JPY"/>
+              <StringArray count="8">
+                <StringItem index="0" value="Kilometer"/>
+                <StringItem index="1" value="Meter"/>
+                <StringItem index="2" value="Centimeter"/>
+                <StringItem index="3" value="Milimeter"/>
+                <StringItem index="4" value="Mile"/>
+                <StringItem index="5" value="Foot"/>
+                <StringItem index="6" value="Inch"/>
+                <StringItem index="7" value="Yard"/>
               </StringArray>
             </Property>
-            <Property name="selectedIndex" type="int" value="1"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -208,7 +224,7 @@
         <Component class="javax.swing.JButton" name="convert">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="F:\program\praktikum dkp\TA\Converter\Repeat Grid 7.png"/>
+              <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\Repeat Grid 7.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -253,7 +269,7 @@
                   <Font name="Segoe UI" size="18" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Currency Converter"/>
+                <Property name="text" type="java.lang.String" value="Length Converter"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -267,7 +283,7 @@
                   <Color blue="cd" green="d1" red="0" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\program\praktikum dkp\TA\Converter\Repeat Grid 2.png"/>
+                  <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\Repeat Grid 2.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -291,7 +307,7 @@
                   <Color blue="cd" green="d1" red="0" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="F:\program\praktikum dkp\TA\Converter\Repeat Grid 5.png"/>
+                  <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\Repeat Grid 5.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -311,32 +327,10 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel3">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Rounded MT Bold" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="From"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Rounded MT Bold" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="To"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="F:\program\praktikum dkp\TA\Converter\Group 2.png"/>
+              <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\Group 2.png"/>
             </Property>
             <Property name="actionCommand" type="java.lang.String" value="clear"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -358,13 +352,13 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Input Amount"/>
+            <Property name="text" type="java.lang.String" value="Input Length"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="F:\program\praktikum dkp\TA\Converter\info.png"/>
+              <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\info.png"/>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
@@ -372,6 +366,21 @@
           <Events>
             <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jButton4MouseMoved"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton5">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\User\Documents\GitHub\TA-PBO-main\TA-PBO-main\history.png"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
