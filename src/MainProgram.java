@@ -43,8 +43,6 @@ public class MainProgram extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
@@ -66,6 +64,7 @@ public class MainProgram extends javax.swing.JFrame {
         inputamount.setBackground(new java.awt.Color(68, 68, 68));
         inputamount.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         inputamount.setForeground(new java.awt.Color(255, 255, 255));
+        inputamount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         inputamount.setBorder(null);
         inputamount.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -77,17 +76,21 @@ public class MainProgram extends javax.swing.JFrame {
         });
 
         pil1.setBackground(new java.awt.Color(204, 204, 204));
-        pil1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "USD", "IDR", "SGD", "SAR", "JPY" }));
+        pil1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Meter", "Centimeter", "Milimeter", "Mile", "Foot", "Inch", "Yard" }));
         pil1.setBorder(null);
         pil1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 pil1MouseMoved(evt);
             }
         });
+        pil1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pil1ActionPerformed(evt);
+            }
+        });
 
         pil2.setBackground(new java.awt.Color(204, 204, 204));
-        pil2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "USD", "IDR", "SGD", "SAR", "JPY" }));
-        pil2.setSelectedIndex(1);
+        pil2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilometer", "Meter", "Centimeter", "Milimeter", "Mile", "Foot", "Inch", "Yard" }));
         pil2.setBorder(null);
         pil2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
@@ -125,7 +128,7 @@ public class MainProgram extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Currency Converter");
+        jLabel1.setText("Length Converter");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 209, 205));
@@ -162,14 +165,6 @@ public class MainProgram extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, 50));
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel3.setText("From");
-
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel4.setText("To");
-
         jButton3.setIcon(new javax.swing.ImageIcon("F:\\program\\praktikum dkp\\TA\\Converter\\Group 2.png")); // NOI18N
         jButton3.setActionCommand("clear");
         jButton3.setBorder(null);
@@ -188,7 +183,7 @@ public class MainProgram extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 255));
-        jLabel5.setText("Input Amount");
+        jLabel5.setText("Input Length");
 
         jButton4.setIcon(new javax.swing.ImageIcon("F:\\program\\praktikum dkp\\TA\\Converter\\info.png")); // NOI18N
         jButton4.setBorderPainted(false);
@@ -212,24 +207,24 @@ public class MainProgram extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(inputamount, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(16, 16, 16)
-                        .addComponent(pil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel4)
-                        .addGap(13, 13, 13)
-                        .addComponent(pil2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                            .addComponent(inputamount))
+                        .addGap(18, 18, 18)
+                        .addComponent(pil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)
                     .addComponent(jLabel2)
-                    .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton3)
                         .addGap(28, 28, 28)
-                        .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(convert, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(output, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(pil2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -239,19 +234,17 @@ public class MainProgram extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addComponent(jLabel5)
                 .addGap(13, 13, 13)
-                .addComponent(inputamount, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inputamount, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(pil1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(pil2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(70, 70, 70)
                 .addComponent(jLabel2)
                 .addGap(23, 23, 23)
-                .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(output, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pil2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
@@ -285,26 +278,35 @@ public class MainProgram extends javax.swing.JFrame {
         output.setForeground(Color.white);
         //deklarasi
         double input,hasil,a;
-        double uang[]= {1, 14915, 1.413, 3.757, 106.942};
-        String matauang[]= {"$","Rp","$","ر.س","¥"}; 
+        double uang[]= {1, 1000, 100000, 1000000, 0.621, 3280.8399, 39370.0787, 1093.6133};
+        String matauang[]= {"km","m","cm","mm","mi","ft","in","yd"}; 
         
         
         //buat objek baru ke class penghitung
         penghitung hitung = new penghitung();
         
         //buat format matauang
-        DecimalFormat numberFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance();
+        /*DecimalFormat numberFormat = (DecimalFormat) DecimalFormat.getCurrencyInstance();
         DecimalFormatSymbols format = new DecimalFormatSymbols();
         format.setCurrencySymbol(matauang[pil2.getSelectedIndex()]);
         format.setMonetaryDecimalSeparator(',');
         format.setGroupingSeparator('.');
         
-        numberFormat.setDecimalFormatSymbols(format);
+        numberFormat.setDecimalFormatSymbols(format);*/
         
+        //format decimal
+        DecimalFormat numberFormat = new DecimalFormat();
+        DecimalFormatSymbols format = new DecimalFormatSymbols();
+        format.setDecimalSeparator(',');
+        format.setGroupingSeparator('.');
+        numberFormat.setDecimalFormatSymbols(format);
+
+
+            
         //mengambil input user
         input = Double.parseDouble(inputamount.getText());
         
-        if(pil1.getSelectedItem().equals("USD")){
+        if(pil1.getSelectedItem().equals("Kilometer")){
             //mengkonversi dengan memanggil method, ambil data kurs dari array
             //setter
             hitung.usdtoother(input, uang[pil2.getSelectedIndex()] ); 
@@ -430,6 +432,10 @@ public class MainProgram extends javax.swing.JFrame {
         jButton4.setCursor(c);        
     }//GEN-LAST:event_jButton4MouseMoved
 
+    private void pil1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pil1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pil1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -476,8 +482,6 @@ public class MainProgram extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
